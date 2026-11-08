@@ -1,0 +1,54 @@
+* { box-sizing: border-box; }
+body { font-family: sans-serif; padding: 20px; }
+.main-caption { text-align: center; margin-bottom: 30px; }
+
+/* Очищення потоку (clearfix) для float */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.col {
+    float: left;
+    padding: 10px; /* Відступи між колонками */
+}
+
+/* Абсолютне позиціонування для карток і вкладок */
+.item {
+    position: relative;
+    background-color: #dcedc8;
+    border: 2px solid black;
+    padding: 40px 15px 15px 15px; 
+    height: 100%;
+}
+
+.item-caption {
+    position: absolute;
+    top: -2px; /* Накладання на верхню границю */
+    right: -2px; /* Накладання на праву границю */
+    padding: 5px 15px;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+.caption1 { background-color: #ffa000; color: black; }
+.caption2 { background-color: #d81b60; color: white; }
+.caption3 { background-color: #f8bbd0; color: black; }
+
+/* 12-column Grid Responsive Layout */
+/* Mobile (<=768px) */
+.col-12 { width: 100%; }
+
+/* Tablet (>768px) */
+@media (min-width: 769px) {
+    .col-md-6 { width: 50%; }
+    .col-md-12 { width: 100%; }
+}
+
+/* Desktop (>992px) */
+@media (min-width: 993px) {
+    .col-lg-4 { width: 33.3333%; }
+}
+
+.links { margin-top: 30px; text-align: center; }
