@@ -1,0 +1,42 @@
+h1 {
+    text-align: center;
+    font-size: 22px;
+}
+
+p a {
+    font-style: italic;
+}
+
+h2 {
+    text-align: center;
+}
+
+.lists {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.lists ul > li:nth-child(odd) {
+    background-color: gray;
+    color: black;
+}
+
+.lists ul > li:nth-child(even) {
+    background-color: white;
+}
+
+.lists ol > li:nth-child(3):hover,
+.lists ol > li:nth-child(5):hover {
+    cursor: pointer;
+}
+
+.lists ol > li:nth-child(4) {
+    background-color: #44c3da; 
+}
+
+@media (min-width: 992px) {
+    .lists {
+        grid-template-columns: 1fr 1fr;
+    }
+}
